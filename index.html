@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -95,16 +95,13 @@
 
 
 
-<meta name="description" content="互联网|全栈|极限运动|烹饪">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Wovski&#39;s Notes">
+<meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Wovski&#39;s Notes">
-<meta property="og:description" content="互联网|全栈|极限运动|烹饪">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wovski&#39;s Notes">
-<meta name="twitter:description" content="互联网|全栈|极限运动|烹饪">
+<meta name="twitter:title" content="Hexo">
 
 
 
@@ -112,9 +109,9 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Muse',
     version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
@@ -140,12 +137,22 @@
 
 
 
-  <title>Wovski's Notes</title>
+  <title>Hexo</title>
   
 
 
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cd6607ff19676bdebbe35603737af7f0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -159,7 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left 
+  <div class="container sidebar-position-right 
   page-home">
     <div class="headband"></div>
 
@@ -171,7 +178,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Wovski's Notes</span>
+        <span class="site-title">Hexo</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -202,6 +209,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -263,11 +280,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="胡钰承">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/yiyi.jpg">
+      <meta itemprop="image" content="/images/yy.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wovski's Notes">
+      <meta itemprop="name" content="Hexo">
     </span>
 
     
@@ -351,12 +368,17 @@
       
         
           
-            <p> 最近项目里面发短信用到了短信猫，按照厂商提供的demo，进行了测试，可以发。满心欢喜的把短信猫的程序架在项目当中，遇到了第一个错误，Java.lang.UnsatisfiedLinkError: no MonDem in java.library.path，造成这个错误的原因就是没有将厂商提供的MonDem.dll放到java.libary.path所在目录下（ps：查看所包含的目录可用System.getProperty(“java.library.path”)代码进行查看，放到任意一个目录即可），第一个错误搞定。接着就遇到了第二个错，关于Mytest.SetThreadMode(1)，出现这个问题，原因是jni调用dll里面的方法的时候，没有找到SetThreadMode这个方法，下面引用一位网友的回答：</p>
-<hr>
-<blockquote>
-<p>注:如果不是在当前工程的根目录下,则javah需要加路径,如:<br>  例:TestDll 的Package为:com<br>  首先在C:\j2sdk1.4.0-rc\bin&gt;下新建目录:com<br>  并拷贝TestDll.class到C:\j2sdk1.4.0-rc\bin\com<br>  其次在CMD下,执行<br>  C:\j2sdk1.4.0-rc\bin&gt;javah com.TestDll,<br>  在C:\j2sdk1.4.0-rc\bin下生成com_TestDll.h(结构为package_classname)<br>  最后com_TestDll.h加入到DLL中去,生成新的DLL</p>
-</blockquote>
-<hr>
+            <p>最近项目里面发短信用到了短信猫，按照厂商提供的demo，进行了测试，可以发。满心欢喜的把短信猫的程序架在项目当中，遇到了第一个错误，java.lang.UnsatisfiedLinkError: no MonDem in java.library.path，造成这个错误的原因就是没有将厂商提供的MonDem.dll放到java.libary.path所在目录下（ps：查看所包含的目录可用System.getProperty(“java.library.path”)代码进行查看，放到任意一个目录即可），第一个错误搞定。接着就遇到了第二个错，关于Mytest.SetThreadMode(1)，出现这个问题，原因是jni调用dll里面的方法的时候，没有找到SetThreadMode这个方法，下面引用一位网友的回答：</p>
+<p>…………………………………………………………………………………………………………………………..</p>
+<pre><code>注:如果不是在当前工程的根目录下,则javah需要加路径,如:
+  例:TestDll 的Package为:com
+  首先在C:\j2sdk1.4.0-rc\bin&gt;下新建目录:com
+  并拷贝TestDll.class到C:\j2sdk1.4.0-rc\bin\com
+  其次在CMD下,执行
+  C:\j2sdk1.4.0-rc\bin&gt;javah com.TestDll,
+  在C:\j2sdk1.4.0-rc\bin下生成com_TestDll.h(结构为package_classname)
+  最后com_TestDll.h加入到DLL中去,生成新的DLL
+</code></pre><p>…………………………………………………………………………………………………………………………..</p>
 <p>说的就是dll调用函数的时候，会根据完整的路径去调用函数，如果你架在自己的项目里面，那调用dll的时候，因为有了自己的报名，和dll里面的就不一样了，于是乎就找不到dll里面的函数，所以就报了上面这个错。</p>
 <p>这里根据自己的解决问题的经验，有两种办法，</p>
 <p>第一，就是将厂商提供的文件，放到src目录下面，这样就不会存在自定义的报名；</p>
@@ -433,7 +455,7 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
-              src="/images/yiyi.jpg"
+              src="/images/yy.jpg"
               alt="胡钰承" />
           
             <p class="site-author-name" itemprop="name">胡钰承</p>
@@ -469,7 +491,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -480,6 +502,41 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hu764525403" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/hu764525403" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-csdn"></i>
+                  
+                    
+                      CSDN
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.weibo.com/u/2610551307" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
           
         </div>
 
@@ -515,7 +572,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">胡钰承</span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
 
   
 </div>
@@ -525,7 +582,7 @@
 
   <span class="post-meta-divider">|</span>
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.2</div>
 
 
         
@@ -568,6 +625,8 @@
   
 
 
+  
+
 
 
 
@@ -595,6 +654,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
