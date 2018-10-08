@@ -88,24 +88,24 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.1.2" />
 
 
 
 
 
 
-<meta name="description" content="在做项目的时候，用到jQuery dialog,在dialog(“open”)一个页面的时候，焦点会自动聚焦到第一个控件上，刚好这个控件绑定了datepicker，就把日历自动弹出来了，纠结半天无果，google了一下，有人也遇到同样的问题。先给出解决方案 &amp;lt;input autofocus&amp;gt;  在标签上加一个autofocus属性就能给指定的控件获取焦点。比如第一个是日期控件，那么把这">
+<meta name="description" content="在做项目的时候，用到jQuery dialog,在dialog(“open”)一个页面的时候，焦点会自动聚焦到第一个控件上，刚好这个控件绑定了datepicker，就把日历自动弹出来了，纠结半天无果，google了一下，有人也遇到同样的问题。先给出解决方案 &amp;lt;input autofocus&amp;gt; 在标签上加一个autofocus属性就能给指定的控件获取焦点。比如第一个是日期控件，那么把这个">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" jquery dialog打开的时候,自动聚焦在第一个控件上">
 <meta property="og:url" content="http://yoursite.com/2015/10/19/jquery-dialog打开的时候-自动聚焦在第一个控件上/index.html">
 <meta property="og:site_name" content="Wovski&#39;s Notes">
-<meta property="og:description" content="在做项目的时候，用到jQuery dialog,在dialog(“open”)一个页面的时候，焦点会自动聚焦到第一个控件上，刚好这个控件绑定了datepicker，就把日历自动弹出来了，纠结半天无果，google了一下，有人也遇到同样的问题。先给出解决方案 &amp;lt;input autofocus&amp;gt;  在标签上加一个autofocus属性就能给指定的控件获取焦点。比如第一个是日期控件，那么把这">
+<meta property="og:description" content="在做项目的时候，用到jQuery dialog,在dialog(“open”)一个页面的时候，焦点会自动聚焦到第一个控件上，刚好这个控件绑定了datepicker，就把日历自动弹出来了，纠结半天无果，google了一下，有人也遇到同样的问题。先给出解决方案 &amp;lt;input autofocus&amp;gt; 在标签上加一个autofocus属性就能给指定的控件获取焦点。比如第一个是日期控件，那么把这个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-04T14:12:12.985Z">
+<meta property="og:updated_time" content="2017-09-04T14:12:12.986Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" jquery dialog打开的时候,自动聚焦在第一个控件上">
-<meta name="twitter:description" content="在做项目的时候，用到jQuery dialog,在dialog(“open”)一个页面的时候，焦点会自动聚焦到第一个控件上，刚好这个控件绑定了datepicker，就把日历自动弹出来了，纠结半天无果，google了一下，有人也遇到同样的问题。先给出解决方案 &amp;lt;input autofocus&amp;gt;  在标签上加一个autofocus属性就能给指定的控件获取焦点。比如第一个是日期控件，那么把这">
+<meta name="twitter:description" content="在做项目的时候，用到jQuery dialog,在dialog(“open”)一个页面的时候，焦点会自动聚焦到第一个控件上，刚好这个控件绑定了datepicker，就把日历自动弹出来了，纠结半天无果，google了一下，有人也遇到同样的问题。先给出解决方案 &amp;lt;input autofocus&amp;gt; 在标签上加一个autofocus属性就能给指定的控件获取焦点。比如第一个是日期控件，那么把这个">
 
 
 
@@ -380,11 +380,10 @@
       
         <p>在做项目的时候，用到jQuery dialog,在dialog(“open”)一个页面的时候，焦点会自动聚焦到第一个控件上，刚好这个控件绑定了datepicker，就把日历自动弹出来了，纠结半天无果，google了一下，有人也遇到同样的问题。先给出解决方案</p>
 <pre><code>&lt;input autofocus&gt;
-</code></pre>
-<p>在标签上加一个autofocus属性就能给指定的控件获取焦点。比如第一个是日期控件，那么把这个属性加到其他标签上去，第一个日历控件就不会聚焦，也就不会弹出来了。话说回来，这个方法有点类似于障眼法。</p>
+</code></pre><p>在标签上加一个autofocus属性就能给指定的控件获取焦点。比如第一个是日期控件，那么把这个属性加到其他标签上去，第一个日历控件就不会聚焦，也就不会弹出来了。话说回来，这个方法有点类似于障眼法。</p>
 <p>附上解决问题的网址：</p>
-<p>http://stackoverflow.com/questions/1202079/prevent-jquery-ui-dialog-from-setting-focus-to-first-textbox</p>
-<p>http://jqueryui.com/upgrade-guide/1.10/#added-ability-to-specify-which-element-to-focus-on-open</p>
+<p><a href="http://stackoverflow.com/questions/1202079/prevent-jquery-ui-dialog-from-setting-focus-to-first-textbox" target="_blank" rel="noopener">http://stackoverflow.com/questions/1202079/prevent-jquery-ui-dialog-from-setting-focus-to-first-textbox</a></p>
+<p><a href="http://jqueryui.com/upgrade-guide/1.10/#added-ability-to-specify-which-element-to-focus-on-open" target="_blank" rel="noopener">http://jqueryui.com/upgrade-guide/1.10/#added-ability-to-specify-which-element-to-focus-on-open</a></p>
 
       
     </div>
@@ -593,7 +592,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
