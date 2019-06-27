@@ -379,8 +379,8 @@
       
 
       
-        <p>最近项目里面发短信用到了短信猫，按照厂商提供的demo，进行了测试，可以发。满心欢喜的把短信猫的程序架在项目当中，遇到了第一个错误，java.lang.UnsatisfiedLinkError: no MonDem in java.library.path，造成这个错误的原因就是没有将厂商提供的MonDem.dll放到java.libary.path所在目录下（ps：查看所包含的目录可用System.getProperty(“java.library.path”)代码进行查看，放到任意一个目录即可），第一个错误搞定。接着就遇到了第二个错，关于Mytest.SetThreadMode(1)，出现这个问题，原因是jni调用dll里面的方法的时候，没有找到SetThreadMode这个方法，下面引用一位网友的回答：</p>
-<p>…………………………………………………………………………………………………………………………..</p>
+        <p>最近项目里面发短信用到了短信猫，按照厂商提供的demo，进行了测试，可以发。满心欢喜的把短信猫的程序架在项目当中，遇到了第一个错误，java.lang.UnsatisfiedLinkError: no MonDem in java.library.path，造成这个错误的原因就是没有将厂商提供的MonDem.dll放到java.libary.path所在目录下（ps：查看所包含的目录可用System.getProperty(&quot;java.library.path&quot;)代码进行查看，放到任意一个目录即可），第一个错误搞定。接着就遇到了第二个错，关于Mytest.SetThreadMode(1)，出现这个问题，原因是jni调用dll里面的方法的时候，没有找到SetThreadMode这个方法，下面引用一位网友的回答：</p>
+<p>............................................................................................................................................</p>
 <pre><code>注:如果不是在当前工程的根目录下,则javah需要加路径,如:
   例:TestDll 的Package为:com
   首先在C:\j2sdk1.4.0-rc\bin&gt;下新建目录:com
@@ -389,13 +389,14 @@
   C:\j2sdk1.4.0-rc\bin&gt;javah com.TestDll,
   在C:\j2sdk1.4.0-rc\bin下生成com_TestDll.h(结构为package_classname)
   最后com_TestDll.h加入到DLL中去,生成新的DLL
-</code></pre><p>…………………………………………………………………………………………………………………………..</p>
+</code></pre>
+<p>............................................................................................................................................</p>
 <p>说的就是dll调用函数的时候，会根据完整的路径去调用函数，如果你架在自己的项目里面，那调用dll的时候，因为有了自己的报名，和dll里面的就不一样了，于是乎就找不到dll里面的函数，所以就报了上面这个错。</p>
 <p>这里根据自己的解决问题的经验，有两种办法，</p>
 <p>第一，就是将厂商提供的文件，放到src目录下面，这样就不会存在自定义的报名；</p>
 <p>第二，根据上面引用网友的回答，重新编译生成dll，如果对jni不熟悉，可以采取第一种方式。</p>
 <p>下面给出一位同行写的关于jni的文章，有兴趣的可以去看看。</p>
-<p><a href="http://www.pconline.com.cn/pcedu/empolder/gj/java/0506/642328.html" target="_blank" rel="noopener">http://www.pconline.com.cn/pcedu/empolder/gj/java/0506/642328.html</a></p>
+<p>http://www.pconline.com.cn/pcedu/empolder/gj/java/0506/642328.html</p>
 
       
     </div>
@@ -507,7 +508,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
